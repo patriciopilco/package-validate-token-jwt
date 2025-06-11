@@ -1,0 +1,32 @@
+{
+  "name": "@patriciopilco/package-validate-token-jwt",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node dist/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/patriciopilco/package-validate-token-jwt.git"
+  },
+  "keywords": [],
+  "author": "Patricio Pilco",
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "bugs": {
+    "url": "https://github.com/patriciopilco/package-validate-token-jwt/issues"
+  },
+  "homepage": "https://github.com/patriciopilco/package-validate-token-jwt#readme",
+  "description": "A package to validate JWT tokens",
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.8.3"
+  }
+}

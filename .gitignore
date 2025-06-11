@@ -1,0 +1,12 @@
+node_modules/
+dist/
+*.log
+.env
+*.tsbuildinfo
+# Salida de compilación
+*.js
+*.d.ts
+# Archivos del sistema
+.DS_Store
+# Salida de pruebas
+coverage/
