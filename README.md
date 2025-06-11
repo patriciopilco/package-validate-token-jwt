@@ -1,5 +1,61 @@
 # package-validate-token-jwt
 
+## Requisitos
+- Node.js >= 16
+- TypeScript >= 5 (si usas el paquete en un proyecto TypeScript)
+
+## Instalación
+
+Para instalar este paquete desde GitHub Packages necesitas configurar autenticación con un token personal (PAT), especialmente si el paquete es privado.
+
+Agrega el repositorio de GitHub Packages en tu `.npmrc` (si no lo tienes):
+
+Ejemplo de `.npmrc` en la raíz de tu proyecto:
+
+```
+@patriciopilco:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=TU_TOKEN_PERSONAL
+```
+
+- Reemplaza `TU_TOKEN_PERSONAL` por un [Personal Access Token de GitHub](https://github.com/settings/tokens) con el scope `read:packages`.
+- **No subas tu token al repositorio.**
+
+Instala el paquete:
+
+```
+npm install @patriciopilco/package-validate-token-jwt
+```
+
+## Uso
+
+### En TypeScript
+```ts
+import { JwtValidator } from '@patriciopilco/package-validate-token-jwt';
+
+const validator = new JwtValidator();
+const token = 'tu.jwt.token.aqui';
+
+if (validator.isTokenValid(token)) {
+  console.log('Token válido');
+} else {
+  console.log('Token inválido o expirado');
+}
+```
+
+### En JavaScript
+```js
+const { JwtValidator } = require('@patriciopilco/package-validate-token-jwt');
+
+const validator = new JwtValidator();
+const token = 'tu.jwt.token.aqui';
+
+if (validator.isTokenValid(token)) {
+  console.log('Token válido');
+} else {
+  console.log('Token inválido o expirado');
+}
+```
+
 ## Pasos para realizar modificaciones y publicar el paquete
 
 1. **Clona el repositorio y crea una rama nueva:**
